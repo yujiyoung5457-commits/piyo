@@ -68,11 +68,11 @@ function createProductCard(product) {
             <div class="plush-fallback" aria-hidden="true"></div>
         </div>
         <div class="product-info">
-            <h3>${product.name}</h3>
+            <div class="couple"><h3>${product.name}</h3><div class="product-meta"><span class="down">${product.category}</span></div></div>
             <p>${product.desc}</p>
-            <div class="product-meta">
+            <div class="product-buy">
                 <strong>${formatPrice(product.price)}</strong>
-                <span>${product.category}</span>
+                <button class="vet">${product.btn}</button>
             </div>
         </div>
     `;
