@@ -91,7 +91,7 @@ function createProductCard(product) {
 }
 
 async function loadProducts() {
-    const response = await fetch("./data/index.js");
+    const response = await fetch("./data/products.json");
     const products = await response.json();
 
     productList.innerHTML = "";
