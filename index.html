@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyo Plush</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cherry+Bomb+One&family=Contrail+One&family=Dongle&family=Gugi&family=Jua&family=Major+Mono+Display&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 네비시작 -->
+    <header class="site-header">
+        <nav class="nav" aria-label="주요 메뉴">
+            <a class="brand" href="#home" aria-label="Piyo Plush 홈">
+                <span class="brand-mark"></span>
+                <span></span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#content">COLLECTION</a></li>
+                <li><a href="#location">STORE</a></li>
+            </ul>
+
+            <button class="menu-button" type="button" aria-label="메뉴 열기" aria-controls="navLinks" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+   <!-- 네비끝 -->
+    
+    <main>
+        
+        <section class="hero section-page is-active" id="home" data-page="home">
+            <div class="hero-main">
+                <div class="headerImg"></div>
+                <div class="hero-copy">
+                    <p class="eyebrow">Pastel bird plush shop</p>
+                    <h1>Piyo Plush</h1>
+                    
+                    <p class="hero-text">
+                        당신의 가족이 되어줄 새(bird)친구를 찾아보세요!
+                    </p>
+                    <!-- 시계구역 -->
+                    <div class="datetime-box">
+                        <span>오늘 날짜 / 시간</span>
+                        <strong id="dateTime">불러오는 중...</strong>
+                    </div>
+                </div>
+                <!-- 시계 끝 -->
+
+                <!-- <div class="hero-actions">
+                    <a class="primary-button page-link" href="#content">상품 보기</a>
+                    <a class="secondary-button page-link" href="#about">브랜드 소개</a>
+                </div> -->
+            </div>
+
+            <!-- 상품3개 추천-->
+            <div class="home-products">
+                <div class="section-title compact">
+                    <p class="eyebrow">Monthly Picks</p>
+                    <h2>이달의 추천 상품 3개</h2>
+                </div>
+                <div class="product-grid recommend-grid" id="recommendList"></div>
+            </div>
+        </section>
+        
+
+        <section class="about section-page" id="about" data-page="about">
+            <div class="section-title">
+                <p class="eyebrow">About</p>
+                <h2>브랜드 소개</h2>
+            </div>
+
+            <div class="about-layout">
+                <article class="info-panel">
+                    <h3>Piyo Plush는</h3>
+                    <p>작은 새가 손바닥 위에 앉은 듯한 포근함을 담은 조류 인형 브랜드입니다. 둥근 몸통과 작은 부리, 말랑한 날개 실루엣을 중심으로 귀엽고 편안한 인상을 만듭니다.</p>
+                </article>
+
+                <article class="info-panel">
+                    <h3>새 인형 컨셉</h3>
+                    <p>병아리, 올빼미, 참새처럼 익숙한 새를 폭신한 인형 형태로 재해석했습니다. 책상, 침대, 가방 옆에 두기 좋은 크기와 부드러운 색감을 목표로 합니다.</p>
+                </article>
+
+                <article class="info-panel color-panel">
+                    <h3>테마 컬러</h3>
+                    <div class="color-list" aria-label="대표 색상 목록">
+                        <span style="background-color: rgb(255, 198, 208);">Pink</span>
+                        <span style="background-color: rgb(255, 246, 194);">Yellow</span>
+                        <span style="background-color: rgb(188, 238, 245);">Sky</span>
+                        <span style="background-color: rgb(210, 240, 163);">Green</span>
+                        <span style="background-color: rgb(226, 187, 241);">Purple</span>
+                    </div>
+                    <p>전체 분위기는 부드러운 파스텔 톤으로 잡아 새 인형의 말랑하고 따뜻한 이미지를 강조했습니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="products section-page" id="content" data-page="content">
+            <div class="section-title">
+                <p class="eyebrow">Collection</p>
+                <h2>인형 갤러리</h2>
+            </div>
+            <p class="section-desc">삐요-플러쉬만의 디자인이 만들어낸 고품질의 인형친구들</p>
+            <div class="product-grid" id="productList"></div>
+        </section>
+
+        <section class="location section-page" id="location" data-page="location">
+            <div class="section-title">
+                <p class="eyebrow">Store</p>
+                <h2>오시는 길</h2>
+            </div>
+
+            <div class="location-layout">
+                <div class="map-box" id="map">
+                    <div id="map" class="map" style="width:100%;height:350px;"></div>
+                </div>
+
+                <div class="store-info">
+                    <h3>삐요-플러쉬</h3>
+                    <p><strong>주소</strong> 서울특별시 종로구 인사동5길 26</p>
+                    <p><strong>전화번호</strong> 02-730-5454</p>
+                    <p class="map-notice">카카오맵 API 키를 연결하면 이 영역에 매장 위치가 표시됩니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=543d80f946c5aa9c0469a8db2e110d7f&libraries=services"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
