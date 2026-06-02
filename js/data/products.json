@@ -22,5 +22,77 @@
         "category": "bird plush",
         "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
         "image": "./img/bird3.png"
+    },
+      {
+        "id": 3,
+        "name": "앵무새들과 함께<정글 시리즈>",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush1.png"
+    },
+      {
+        "id": 3,
+        "name": "분홍 올빼미 인형",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush2.png"
+    },
+      {
+        "id": 3,
+        "name": "레드 토코투칸 인형",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush3.png"
+    },
+      {
+        "id": 3,
+        "name": "바이올렛 토코투칸 인형",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush4.png"
+    },
+      {
+        "id": 3,
+        "name": "올빼미 시리즈<보송보송 잘자>",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush5.png"
+    },
+      {
+        "id": 3,
+        "name": "그린 토코투칸 인형",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush6.png"
+    },
+      {
+        "id": 3,
+        "name": "아기 앵무새<삐요삐요 시리즈>",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush7.png"
+    },
+      {
+        "id": 3,
+        "name": "스카이블루 올빼미 인형",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush8.png"
+    },
+     {
+        "id": 3,
+        "name": "파스텔 컬러 아기병아리들",
+        "price": 20000,
+        "category": "bird plush",
+        "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
+        "image": "./img/birdplush10.png"
     }
 ]
