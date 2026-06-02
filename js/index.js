@@ -91,7 +91,7 @@ function createProductCard(product) {
 }
 
 async function loadProducts() {
-    const response = await fetch("./data/products.json");
+    const response = await fetch("./js/data/products.json");
     const products = await response.json();
 
     productList.innerHTML = "";
@@ -170,4 +170,3 @@ const initialPage = window.location.hash.replace("#", "");
 if (["home", "about", "content", "location"].includes(initialPage)) {
     showPage(initialPage);
 }
-

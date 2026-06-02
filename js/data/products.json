@@ -5,7 +5,7 @@
         "price": 18000,
         "category": "bird plush",
         "desc": "파스텔색의 작고 폭신한 모란앵무새 인형",
-        "image": "../img/bird1.png"
+        "image": "./img/bird1.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "price": 22000,
         "category": "bird plush",
         "desc": "연하늘색 포인트가 들어간 둥근 부엉이 인형",
-        "image": "../img/bird2.png"
+        "image": "./img/bird2.png"
     },
     {
         "id": 3,
@@ -21,6 +21,6 @@
         "price": 20000,
         "category": "bird plush",
         "desc": "연보라색 포인트가 들어간 둥근 올빼미 인형",
-        "image": "../img/bird3.png"
+        "image": "./img/bird3.png"
     }
 ]
