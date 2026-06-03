@@ -48,17 +48,25 @@ button { border: 0; font: inherit; cursor: pointer; }
     margin: 0 auto;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* fhrh------------------------------ */
 .brand-mark {
     display: flex;
     justify-content: center;
     align-items: center;
     /* margin-top: 40px; */
-    width: 100px;
-    height: 60px;
-    border: 1px solid red;
-    background-image: url(../img/piyo_plush_logo_transparent.png);
+    width: 400px;
+    height: 80%;
+    /* border: 1px solid red; */
+    background-image: url(../img/lg.png);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: left;
 }
 
 .nav-links {
@@ -71,7 +79,7 @@ button { border: 0; font: inherit; cursor: pointer; }
 .nav-links a {
     font-size: 40px;
     font-family: "Dongle", sans-serif;
-    color: #acc9da;
+    color: #e96b6b;
     display: block;
     padding: 10px 0;
 }
@@ -268,6 +276,59 @@ h1, h2, h3 { letter-spacing: 0; }
 
 .section-title.compact h2 { font-size: clamp(38px, 4vw, 52px); }
 
+.plush-slider-section {
+    margin-top: 46px;
+    padding-top: 46px;
+    border-top: 1px solid rgba(185, 90, 111, 0.2);
+}
+
+.plush-slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 36px) / 3);
+    gap: 18px;
+    width: 100%;
+    margin-top: 28px;
+    padding: 24px 0 34px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: calc((100% - ((100% - 36px) / 3)) / 2);
+    cursor: grab;
+}
+
+.plush-slider:active {
+    cursor: grabbing;
+}
+
+.plush-slide {
+    position: relative;
+    aspect-ratio: 1 / 0.78;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--yellow), var(--sky));
+    box-shadow: 0 18px 38px rgba(91, 109, 118, 0.12);
+    scroll-snap-align: center;
+    transform: scale(0.94);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.plush-slide.is-center {
+    z-index: 2;
+    transform: scale(1.05);
+    box-shadow: 0 24px 48px rgba(91, 109, 118, 0.2);
+}
+
+.plush-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 .about-layout, .location-layout {
     
     display: grid;
@@ -418,6 +479,7 @@ h1, h2, h3 { letter-spacing: 0; }
 }
 
 .product-buy strong {
+    color: #e96b6b;
     white-space: nowrap;
 }
 
@@ -448,6 +510,10 @@ h1, h2, h3 { letter-spacing: 0; }
         width: 220px;
     }
     .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .plush-slider {
+        grid-auto-columns: calc((100% - 18px) / 2);
+        scroll-padding-inline: calc((100% - ((100% - 18px) / 2)) / 2);
+    }
     .hero-visual { min-height: 360px; }
     .big-plush { right: 50%; width: 220px; height: 285px; transform: translateX(50%); }
 }
@@ -470,6 +536,13 @@ h1, h2, h3 { letter-spacing: 0; }
         box-shadow: 0 18px 38px rgba(91, 109, 118, 0.16);
     }
    
+}
+
+@media (max-width: 640px) {
+    .plush-slider {
+        grid-auto-columns: 78%;
+        scroll-padding-inline: 11%;
+    }
 }
 
 .product-info h3{

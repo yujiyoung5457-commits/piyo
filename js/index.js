@@ -5,6 +5,7 @@ const pages = document.querySelectorAll(".section-page");
 const dateTime = document.querySelector("#dateTime");
 const productList = document.querySelector("#productList");
 const recommendList = document.querySelector("#recommendList");
+const plushSlider = document.querySelector("#plushSlider");
 let mapLoaded = false;
 const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -106,6 +107,71 @@ async function loadProducts() {
     });
 }
 
+function updateCenterSlide() {
+    if (!plushSlider) {
+        return;
+    }
+
+    const sliderCenter = plushSlider.getBoundingClientRect().left + (plushSlider.clientWidth / 2);
+    let closestSlide = null;
+    let closestDistance = Infinity;
+
+    plushSlider.querySelectorAll(".plush-slide").forEach((slide) => {
+        const rect = slide.getBoundingClientRect();
+        const slideCenter = rect.left + (rect.width / 2);
+        const distance = Math.abs(sliderCenter - slideCenter);
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSlide = slide;
+        }
+    });
+
+    plushSlider.querySelectorAll(".plush-slide").forEach((slide) => {
+        slide.classList.toggle("is-center", slide === closestSlide);
+    });
+}
+
+function initPlushSlider() {
+    if (!plushSlider) {
+        return;
+    }
+
+    let isPointerDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+
+    plushSlider.addEventListener("pointerdown", (event) => {
+        isPointerDown = true;
+        startX = event.clientX;
+        startScrollLeft = plushSlider.scrollLeft;
+        plushSlider.setPointerCapture(event.pointerId);
+    });
+
+    plushSlider.addEventListener("pointermove", (event) => {
+        if (!isPointerDown) {
+            return;
+        }
+
+        plushSlider.scrollLeft = startScrollLeft - (event.clientX - startX);
+    });
+
+    plushSlider.addEventListener("pointerup", () => {
+        isPointerDown = false;
+    });
+
+    plushSlider.addEventListener("pointercancel", () => {
+        isPointerDown = false;
+    });
+
+    plushSlider.addEventListener("scroll", () => {
+        window.requestAnimationFrame(updateCenterSlide);
+    });
+
+    window.addEventListener("resize", updateCenterSlide);
+    updateCenterSlide();
+}
+
 
 function initKakaoMap() {
     const mapContainer = document.querySelector("#map");
@@ -165,6 +231,7 @@ pageLinks.forEach((link) => {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 loadProducts();
+initPlushSlider();
 
 const initialPage = window.location.hash.replace("#", "");
 if (["home", "about", "content", "location"].includes(initialPage)) {
